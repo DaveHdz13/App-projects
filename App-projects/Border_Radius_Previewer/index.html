@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/previewer.css">
+  <script src="/previewer.js" defer></script>
+  <title>BR Previewer</title>
+</head>
+<body>
+  <h1>Border Radius Previewer</h1>
+  <section class="userCont">
+    <div class="inputCont-1">
+      <input id="myInput" type="number" maxlength="8">
+      <select class="units">
+        <option value="px">px</option>
+        <option value="em">em</option>
+        <option value="rem">rem</option>
+        <option value="%">%</option>
+        <option value="vh">vh</option>
+      </select>
+      <button id="allBordersBtn">Change</button>
+    </div>
+    <div class="inputCont-2">
+      <input id="myInput-TR" type="number" maxlength="8">
+      <select class="units">
+        <option value="px">px</option>
+        <option value="em">em</option>
+        <option value="rem">rem</option>
+        <option value="%">%</option>
+        <option value="vh">vh</option>
+      </select>
+      <input id="myInput-BR" type="number" maxlength="8">
+      <select class="units">
+        <option value="px">px</option>
+        <option value="em">em</option>
+        <option value="rem">rem</option>
+        <option value="%">%</option>
+        <option value="vh">vh</option>
+      </select>
+      <input id="myInput-BL" type="number" maxlength="8">
+      <select class="units">
+        <option value="px">px</option>
+        <option value="em">em</option>
+        <option value="rem">rem</option>
+        <option value="%">%</option>
+        <option value="vh">vh</option>
+      </select>
+      <input id="myInput-TL" type="number" maxlength="8">
+      <select class="units">
+        <option value="px">px</option>
+        <option value="em">em</option>
+        <option value="rem">rem</option>
+        <option value="%">%</option>
+        <option value="vh">vh</option>
+      </select>
+      <button id="eachBorderBtn">Change</button>
+    </div>
+
+    <!--
+    <input type="text" value="CSS goes here" id="cssOutput">
+    <button>Copy text</button>
+    -->
+  </section>
+  <section class="boxResult">
+    <div id="box" class="border"></div>
+    <span id="allBorders">0</span>
+  </section>
+</body>
+</html>

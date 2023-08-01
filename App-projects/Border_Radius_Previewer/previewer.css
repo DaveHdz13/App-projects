@@ -1,0 +1,72 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body, html {
+  box-sizing: border-box;
+  background: #232323;
+  font-family: sans-serif;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  color: #fff;
+  margin: 2%;
+  text-align: center;
+}
+.boxResult {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#box {
+  width: 50%;
+  height: 50vh;
+  position: relative;
+  background-color: #d3d3d3;
+}
+.border {
+  border: 2px solid green;
+}
+
+.userCont {
+  margin: 3% 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+/*Input*/
+#myInput-TR {
+  width: 10%;
+}
+#myInput-BR {
+  width: 10%;
+}
+#myInput-BL {
+  width: 10%;
+}
+#myInput-TL {
+  width: 10%;
+}
+
+span {
+  margin: 0.5% 0;
+  color: #fff;
+}
+
+.inputCont-1, .inputCont-2 {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
