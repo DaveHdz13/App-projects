@@ -5,6 +5,8 @@ const inputTopRight = document.getElementById("myInput-TR")
 const inputBottomRight = document.getElementById("myInput-BR")
 const inputBottomLeft = document.getElementById("myInput-BL")
 const inputTopLeft = document.getElementById("myInput-TL")
+// To CSS
+const cssResult = document.getElementById("cssResult")
 
 
 // Buttons
@@ -13,7 +15,7 @@ const eachBorderBtn = document.getElementById("eachBorderBtn")
 
 // Result
 const boxStyle = document.getElementById("box").style
-const allBordersShow = document.getElementById("allBorders")
+const copyCss = document.getElementById("copyCss")
 
 console.log(unitsDivs);
 
@@ -32,9 +34,10 @@ unitsDivs.forEach(function(div) {
 allBordersBtn.addEventListener("click", () => {
   inputValue = myInputElement.value
 
-  allBordersShow.innerHTML = ''
-  allBordersShow.innerHTML = inputValue + selectedUnit
   applyBorderRadius()
+
+  cssResult.value = ''
+  cssResult.value = `border-radius: ${boxStyle.borderRadius};`
 })
 
 eachBorderBtn.addEventListener("click", () => {
@@ -43,13 +46,12 @@ eachBorderBtn.addEventListener("click", () => {
   let valueBL = inputBottomLeft.value
   let valueTL = inputTopLeft.value
 
-  allBordersShow.innerHTML = ''
-  allBordersShow.innerHTML = `Top Right: ${valueTR + selectedUnit} Bottom Right: ${valueBR + selectedUnit} Bottom Left: ${valueBL + selectedUnit} Top left: ${valueTL + selectedUnit}`
-
   applyToTR(valueTR)
   applyToBR(valueBR)
   applyToBL(valueBL)
   applyToTL(valueTL)
+  
+  cssResult.value = `border-radius: ${boxStyle.borderRadius};`
 })
 
 // Functions
@@ -71,4 +73,21 @@ const applyToBL = (valueBL) => {
 
 const applyToTL = (valueTL) => {
   boxStyle.borderTopLeftRadius = valueTL + selectedUnit
+}
+
+const copyClip = () => {
+  copyCss.addEventListener("click", () => {
+    cssResult.select();
+    cssResult.setSelectionRange(0, 99999); // For mobile devices
+
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(cssResult.value);
+
+    // Alert the copied text
+    alert("Copied the text: " + cssResult.value);
+  })
+}
+
+if (copyCss) {
+  copyClip()
 }

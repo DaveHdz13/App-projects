@@ -9,6 +9,16 @@ body, html {
   font-family: sans-serif;
 }
 
+select {
+  appearance: none;
+  -webkit-appearance: none;
+}
+button {
+  margin-top: 3%;
+}
+#copyCss {
+  margin-top: 2%;
+}
 section {
   width: 100%;
   display: flex;
@@ -16,9 +26,9 @@ section {
   align-items: center;
   flex-direction: column;
 }
-h1 {
+h1, h3 {
   color: #fff;
-  margin: 2%;
+  margin: 1%;
   text-align: center;
 }
 .boxResult {
@@ -34,7 +44,7 @@ h1 {
   background-color: #d3d3d3;
 }
 .border {
-  border: 2px solid green;
+  border: 8px solid green;
 }
 
 .userCont {
@@ -46,20 +56,25 @@ h1 {
 }
 
 /*Input*/
-#myInput-TR {
-  width: 10%;
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-#myInput-BR {
-  width: 10%;
+.corner, .allCorners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1%;
 }
-#myInput-BL {
-  width: 10%;
+.corner-input {
+  width: 80%;
 }
-#myInput-TL {
-  width: 10%;
+.units {
+  width: 20%;
 }
-
-span {
+#allBorders {
   margin: 0.5% 0;
   color: #fff;
 }
@@ -69,4 +84,12 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  color: #fff;
+}
+.all-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }

@@ -3,57 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/previewer.css">
-  <script src="/previewer.js" defer></script>
+  <link rel="stylesheet" href="./previewer.css">
+  <script src="./previewer.js" defer></script>
   <title>BR Previewer</title>
 </head>
 <body>
   <h1>Border Radius Previewer</h1>
+  <h3>Select wich border to change!</h3>
   <section class="userCont">
     <div class="inputCont-1">
-      <input id="myInput" type="number" maxlength="8">
-      <select class="units">
-        <option value="px">px</option>
-        <option value="em">em</option>
-        <option value="rem">rem</option>
-        <option value="%">%</option>
-        <option value="vh">vh</option>
-      </select>
+      <sapn>All Borders</sapn>
+      <div class="allCorners">
+        <input id="myInput" type="number" maxlength="8">
+        <select class="units">
+          <option value="px">px</option>
+          <option value="em">em</option>
+          <option value="rem">rem</option>
+          <option value="%">%</option>
+          <option value="vh">vh</option>
+        </select>
+      </div>
       <button id="allBordersBtn">Change</button>
     </div>
     <div class="inputCont-2">
-      <input id="myInput-TR" type="number" maxlength="8">
-      <select class="units">
-        <option value="px">px</option>
-        <option value="em">em</option>
-        <option value="rem">rem</option>
-        <option value="%">%</option>
-        <option value="vh">vh</option>
-      </select>
-      <input id="myInput-BR" type="number" maxlength="8">
-      <select class="units">
-        <option value="px">px</option>
-        <option value="em">em</option>
-        <option value="rem">rem</option>
-        <option value="%">%</option>
-        <option value="vh">vh</option>
-      </select>
-      <input id="myInput-BL" type="number" maxlength="8">
-      <select class="units">
-        <option value="px">px</option>
-        <option value="em">em</option>
-        <option value="rem">rem</option>
-        <option value="%">%</option>
-        <option value="vh">vh</option>
-      </select>
-      <input id="myInput-TL" type="number" maxlength="8">
-      <select class="units">
-        <option value="px">px</option>
-        <option value="em">em</option>
-        <option value="rem">rem</option>
-        <option value="%">%</option>
-        <option value="vh">vh</option>
-      </select>
+      <div class="all-inputs">
+        <div class="col">
+          <sapn>Top Right</sapn>
+          <div class="corner">
+            <input id="myInput-TR" class="corner-input" type="number" maxlength="8">
+            <select class="units">
+              <option value="px">px</option>
+              <option value="em">em</option>
+              <option value="rem">rem</option>
+              <option value="%">%</option>
+              <option value="vh">vh</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <sapn>Bottom Right</sapn>
+          <div class="corner">
+            <input id="myInput-BR" class="corner-input" type="number" maxlength="8">
+            <select class="units">
+              <option value="px">px</option>
+              <option value="em">em</option>
+              <option value="rem">rem</option>
+              <option value="%">%</option>
+              <option value="vh">vh</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <sapn>Bottom Left</sapn>
+          <div class="corner">
+            <input id="myInput-BL" class="corner-input" type="number" maxlength="8">
+            <select class="units">
+              <option value="px">px</option>
+              <option value="em">em</option>
+              <option value="rem">rem</option>
+              <option value="%">%</option>
+              <option value="vh">vh</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <sapn>Top Left</sapn>
+          <div class="corner">
+            <input id="myInput-TL" class="corner-input" type="number" maxlength="8">
+            <select class="units">
+              <option value="px">px</option>
+              <option value="em">em</option>
+              <option value="rem">rem</option>
+              <option value="%">%</option>
+              <option value="vh">vh</option>
+            </select>
+          </div>
+        </div>
+      </div>
       <button id="eachBorderBtn">Change</button>
     </div>
 
@@ -64,7 +90,10 @@
   </section>
   <section class="boxResult">
     <div id="box" class="border"></div>
-    <span id="allBorders">0</span>
+  </section>
+  <section class="css-display">
+    <input type="text" id="cssResult">
+    <button id="copyCss">Copy</button>
   </section>
 </body>
 </html>
