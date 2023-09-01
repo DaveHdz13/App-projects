@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magic Ball</title>
+    <link rel="stylesheet" href="magicBall.css">
+    <script src="magicBall.js" defer></script>
+    <title>Magic 8-Ball</title>
 </head>
 <body>
-    <h1>Magic Ball 🎱</h1>
+    <div class="magic-8-ball-container">
+        <div class="crystal-ball" id="crystal-ball">
+            <div class="answer" id="answer">
+                <!-- The magic 8-ball answer will appear here -->
+            </div>
+        </div>
+        <button id="shake-button">Shake the 8-Ball</button>
+    </div>
 </body>
 </html>

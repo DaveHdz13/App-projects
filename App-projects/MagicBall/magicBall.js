@@ -1,45 +1,37 @@
-let ballChoice = Math.floor(Math.random() * 9);
-let userQuestion = "Should I eat pizza tomorrow?"
+const crystalBall = document.getElementById('crystal-ball');
+const answerDisplay = document.getElementById('answer');
+const shakeButton = document.getElementById('shake-button');
 
-function ballResponse(ballChoice, userQuestion) {
-  switch(ballChoice) {
-    case 0:
-      console.log("Question:    " + userQuestion)
-      console.log("8 Ball:     Yes - definitely.")
-    break;
-    case 1:
-      console.log("Question:    " + userQuestion)
-      console.log("It is decidedly so.")
-    break;
-    case 2:
-      console.log("Question:    " + userQuestion)
-      console.log("8 Ball:     Without a doubt.")
-    break;
-    case 3:
-      console.log("Question:    " + userQuestion)
-      console.log("8 Ball:     Reply hazy, try again")
-    break;
-    case 4:
-      console.log("Question:    " + userQuestion)
-      console.log("8 Ball:     Ask again later.")
-    break;
-    case 5:
-      console.log("Question:    " + userQuestion)
-      console.log("8 Ball:     Better not tell you now.")
-    break;
-    case 6:
-      console.log("Question:    " + userQuestion)
-      console.log("My sources say no.")
-    break;
-    case 7:
-      console.log("Question:    " + userQuestion)
-      console.log("8 Ball:     Outlook not so good.")
-    break;
-    case 8:
-      console.log("Question:    " + userQuestion)
-      console.log("8 Ball:     Very doubtful.")
-    break;
-  }
+const responses = [
+    "Yes - definitely.",
+    "It is decidedly so.",
+    "Without a doubt.",
+    "Reply hazy, try again.",
+    "Ask again later.",
+    "Better not tell you now.",
+    "My sources say no.",
+    "Outlook not so good.",
+    "Very doubtful."
+];
+
+function getRandomResponse() {
+    return responses[Math.floor(Math.random() * responses.length)];
 }
 
-ballResponse(ballChoice, userQuestion)
+function displayAnswer() {
+    const userQuestion = "Should I eat pizza tomorrow?"; // Replace with user's question
+    const randomResponse = getRandomResponse();
+
+    answerDisplay.textContent = `Question: ${userQuestion}`;
+    setTimeout(() => {
+        answerDisplay.textContent = `8 Ball: ${randomResponse}`;
+    }, 1000); // Delay the answer display for a second for added mystique
+}
+
+shakeButton.addEventListener('click', () => {
+    crystalBall.classList.add('shake');
+    setTimeout(() => {
+        crystalBall.classList.remove('shake');
+        displayAnswer();
+    }, 1000); // Delay the answer display for a second after shaking
+});
