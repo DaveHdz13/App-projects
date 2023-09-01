@@ -1,5 +1,5 @@
 let ballChoice = Math.floor(Math.random() * 9);
-let userQuestion = "Fuck you?"
+let userQuestion = "Should I eat pizza tomorrow?"
 
 function ballResponse(ballChoice, userQuestion) {
   switch(ballChoice) {
