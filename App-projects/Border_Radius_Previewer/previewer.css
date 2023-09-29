@@ -69,10 +69,11 @@ h1, h3 {
   margin: 1%;
 }
 .corner-input {
-  width: 80%;
+  width: 40%;
 }
 .units {
   width: 20%;
+  text-align: center;
 }
 #allBorders {
   margin: 0.5% 0;
@@ -80,7 +81,7 @@ h1, h3 {
 }
 
 .inputCont-1, .inputCont-2 {
-  width: 50%;
+  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
