@@ -50,7 +50,7 @@ button#shake-button:hover {
         opacity: 0.2;
     }
     50% {
-        opacity: 0.5;
+        opacity: 0.9;
     }
     100% {
         opacity: 0.2;
