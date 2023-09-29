@@ -1,0 +1,67 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body, html {
+  box-sizing: border-box;
+  background-color: #202020;
+  color: #fafafa;
+  font-family: monocraft;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  display: none;
+  position: absolute;
+  bottom: 3%;
+  left: 5%;
+}
+
+.card {
+  flex: 0.2;
+  height: 70%;
+  position: relative;
+  margin: 0 1%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 1s ease-in-out;
+}
+
+.card:nth-child(1) {
+  background-image: url(./img/plains.png);
+}
+.card:nth-child(2) {
+  background-image: url(./img/forest.png);
+}
+.card:nth-child(3) {
+  background-image: url(./img/mountains.png);
+}
+.card:nth-child(4) {
+  background-image: url(./img/ocean.png);
+}
+.card:nth-child(5) {
+  background-image: url(./img/jungle.png);
+}
+
+.card.active {
+  flex: 1;
+}
+
+.card.active span {
+  display: flex;
+}
